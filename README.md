@@ -104,15 +104,15 @@ If you want to use original pretrained weights for YOLOv3:
 
 --
 
-##Using Streaming Feature
+## Using Streaming Feature
 
 You can run a streaming server on, an example, Raspberry and process data in your pc.
 
-For the Streaming Server Raspberry i reccomend this: 
-[Web Streaming Multithread]: https://github.com/BigNerd95/picamera/blob/f723b0832f154404c186017a13bf7a14dd48d36b/docs/examples/web_streaming_multithread.py 
+For the Streaming Server Raspberry i reccomend [Web Streaming Multithread](https://github.com/BigNerd95/picamera/blob/f723b0832f154404c186017a13bf7a14dd48d36b/docs/examples/web_streaming_multithread.py)
+
 
 --
 
-##Video 
+## Video 
 I left a video demonstration below.
-[![Watch the video](https://github.com/DrLux/keras-yolo3/raw/copertina.png?raw=true)](https://youtu.be/SFBUdU5PKgI)
+[![Watch the video](https://github.com/DrLux/drlux.github.io/blob/master/deeplearningai/copertina.png?raw=true)](https://youtu.be/SFBUdU5PKgI)
