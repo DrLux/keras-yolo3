@@ -128,10 +128,10 @@ if __name__ == '__main__':
     
     if FLAGS.streaming:
         cam = cv2.VideoCapture()
-        #cam.open(FLAGS.url) --------------> da fixare
+        cam.open(FLAGS.url) 
         if not FLAGS.url:
             print("Must specify url to use streaming feature.")
-        cam.open("http://192.168.1.4:8000/stream.mjpeg")
+        #cam.open("http://192.168.1.4:8000/stream.mjpeg") my ip, ignore it, i'm lazy
         process_frames(cam)
  
     if FLAGS.image:

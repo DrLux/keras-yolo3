@@ -27,13 +27,10 @@ For Tiny YOLOv3, just do in a similar way, just specify model path and anchor pa
 ### Usage
 Use --help to see usage of yolo_video.py:
 ```
-usage: yolo_video.py [-h] [--model MODEL] [--anchors ANCHORS]
+usage: usage: yolo_video.py [-h] [--model MODEL] [--anchors ANCHORS]
                      [--classes CLASSES] [--gpu_num GPU_NUM] [--image]
-                     [--input] [--output]
-
-positional arguments:
-  --input        Video input path
-  --output       Video output path
+                     [--input [INPUT]] [--output [OUTPUT]] [--webcam]
+                     [--streaming] [--url [URL]]
 
 optional arguments:
   -h, --help         show this help message and exit
@@ -43,7 +40,14 @@ optional arguments:
   --classes CLASSES  path to class definitions, default
                      model_data/coco_classes.txt
   --gpu_num GPU_NUM  Number of GPU to use, default 1
-  --image            Image detection mode, will ignore all positional arguments
+  --image            Image detection mode, will ignore all positional
+                     arguments
+  --input [INPUT]    Video input path
+  --output [OUTPUT]  [Optional] Video output path
+  --webcam           Detect direct from webcam
+  --streaming        Detect direct from streaming, need --url parameter
+  --url [URL]        Input url of streaming
+
 ```
 ---
 
@@ -97,3 +101,18 @@ If you want to use original pretrained weights for YOLOv3:
 6. The training strategy is for reference only. Adjust it according to your dataset and your goal. And add further strategy if needed.
 
 7. For speeding up the training process with frozen layers train_bottleneck.py can be used. It will compute the bottleneck features of the frozen model first and then only trains the last layers. This makes training on CPU possible in a reasonable time. See [this](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html) for more information on bottleneck features.
+
+--
+
+##Using Streaming Feature
+
+You can run a streaming server on, an example, Raspberry and process data in your pc.
+
+For the Streaming Server Raspberry i reccomend this: 
+[Web Streaming Multithread]: https://github.com/BigNerd95/picamera/blob/f723b0832f154404c186017a13bf7a14dd48d36b/docs/examples/web_streaming_multithread.py 
+
+--
+
+##Video 
+I left a video demonstration below.
+[![Watch the video](https://github.com/DrLux/keras-yolo3/raw/copertina.png?raw=true)](https://youtu.be/SFBUdU5PKgI)
